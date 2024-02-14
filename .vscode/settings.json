@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/workspaces/Practice"
+    "cmake.sourceDirectory": "/workspaces/Practice",
+    "C_Cpp.errorSquiggles": "disabled"
 }
