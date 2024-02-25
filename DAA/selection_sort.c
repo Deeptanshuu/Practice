@@ -20,7 +20,6 @@ void SelectionSort(int arr[], int size)
             if (arr[j] < arr[min_index])
             {
                 min_index = j;
-                printf("this is j %d\n",j);
             }
         }
         if(min_index != i)
@@ -43,7 +42,11 @@ int main()
     int arr[] = {10, 5, 8, 9, 7};
     int size = 5;
 
+    printf("Unsorted Array:");
     PrintArray(arr, size);
+
     SelectionSort(arr, size);
+
+    printf("Sorted Array:");
     PrintArray(arr, size);
 }

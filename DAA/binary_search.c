@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-void PrintArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
+void PrintArray(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         printf("%d ", arr[i]);
     }
     printf("\n");
 }
 
-int BinarySearch(int array[], int start_index, int end_index, int KEY) {
-    if (end_index >= start_index) {
+int BinarySearch(int array[], int start_index, int end_index, int KEY)
+{
+    if (end_index >= start_index)
+    {
         int middle = start_index + (end_index - start_index) / 2;
         if (array[middle] == KEY)
             return middle;
@@ -19,14 +23,16 @@ int BinarySearch(int array[], int start_index, int end_index, int KEY) {
     return -1;
 }
 
-int main() {
+int main()
+{
     int size;
     printf("Enter the size of the array: ");
     scanf("%d", &size);
 
     int arr[size];
     printf("Enter the elements of the array:\n");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         printf("Element %d: ", i);
         scanf("%d", &arr[i]);
     }
@@ -39,9 +45,12 @@ int main() {
     scanf("%d", &key);
 
     int result = BinarySearch(arr, 0, size - 1, key);
-    if (result != -1) {
+    if (result != -1)
+    {
         printf("Element found at index: %d\n", result);
-    } else {
+    }
+    else
+    {
         printf("Element not found in the array.\n");
     }
 
