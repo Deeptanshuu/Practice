@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 
 int main() {
     int w, i, f, frames[50];
@@ -31,6 +30,6 @@ int main() {
         printf("\n Acknowledgment of above frames sent is received by sender\n");
     }
 
-    getch();
+    getchar();
     return 0;
 }
