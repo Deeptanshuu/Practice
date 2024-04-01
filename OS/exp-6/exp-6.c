@@ -3,7 +3,6 @@
 
 int mutex = 1, full = 0, empty = 3, x = 0;
 
-//heeloooo
 int main() {
     int n;
     void producer();
