@@ -45,7 +45,7 @@ int main() {
 
     floydWarshall(n, A, D);  
 
-    printf("Shortest distances between all pairs of vertices:\n");  
+    printf("\nShortest distances between all pairs of vertices:\n");  
     for (int i = 0; i < n; i++) {  
         for (int j = 0; j < n; j++) {  
             if (D[i][j] == INF)  
