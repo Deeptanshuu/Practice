@@ -7,37 +7,37 @@ void PrintArray(int arr[], int size) {
     printf("\n");
 }
 
-void Combine(int A[], int low, int mid, int high) {
-    int i = low;
-    int j = mid + 1;
+void Merge(int A[], int low, int mid, int high) {
+    int left = low;
+    int right = mid + 1;
     int k = low;
     int temp[high - low + 1];
 
-    while (i <= mid && j <= high) {
-        if (A[i] <= A[j]) {
-            temp[k] = A[i];
-            i++;
+    while (left <= mid && right <= high) {
+        if (A[left] <= A[right]) {
+            temp[k - low] = A[left];
+            left++;
         } else {
-            temp[k] = A[j];
-            j++;
+            temp[k - low] = A[right];
+            right++;
         }
         k++;
     }
 
-    while (i <= mid) {
-        temp[k] = A[i];
-        i++;
+    while (left <= mid) {
+        temp[k - low] = A[left];
+        left++;
         k++;
     }
 
-    while (j <= high) {
-        temp[k] = A[j];
-        j++;
+    while (right <= high) {
+        temp[k - low] = A[right];
+        right++;
         k++;
     }
 
     for (int x = low; x <= high; x++) {
-        A[x] = temp[x];
+        A[x] = temp[x - low];
     }
 }
 
@@ -46,7 +46,7 @@ void MergeSort(int A[], int low, int high) {
         int mid = (low + high) / 2;
         MergeSort(A, low, mid);
         MergeSort(A, mid + 1, high);
-        Combine(A, low, mid, high);
+        Merge(A, low, mid, high);
     }
 }
 
