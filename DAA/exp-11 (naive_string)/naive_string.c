@@ -16,12 +16,10 @@ int main() {
     char text[100], pattern[100];
 
     printf("Enter the text: ");
-    fgets(text, 100, stdin);
-    text[strcspn(text, "\n")] = '\0'; // remove newline character
+    scanf("%99[^\n]%*c", text); // Read up to 99 characters until newline, %*c discards the newline character
 
     printf("Enter the pattern: ");
-    fgets(pattern, 100, stdin);
-    pattern[strcspn(pattern, "\n")] = '\0'; // remove newline character
+    scanf("%99[^\n]%*c", pattern); // Read up to 99 characters until newline, %*c discards the newline character
 
     int shift = naive_string_matcher(text, pattern);
     if (shift == -1) {

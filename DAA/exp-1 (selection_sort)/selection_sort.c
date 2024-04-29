@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void PrintArray(int arr[], int size)
+{
+    for (int i = 0; i != size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
 void Swap(int *a, int *b)
 {
     int temp;
@@ -22,24 +31,20 @@ void SelectionSort(int arr[], int size)
                 min_index = j;
             }
         }
-        if(min_index != i)
+        if(min_index != i){
+            printf("\nSorting:");
+            PrintArray(arr, size);
             Swap(&arr[i],&arr[min_index]);
+            printf("arr[i]:%d, arr[min_index]:%d\n",arr[i],arr[min_index]);
+        }
     }
 }
 
-void PrintArray(int arr[], int size)
-{
 
-    for (int i = 0; i != size; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
 
 int main()
 {
-    int arr[] = {10, 5, 8, 9, 7};
+    int arr[] = {5, 4, 3, 2, 1};
     int size = 5;
 
     printf("Unsorted Array:");
