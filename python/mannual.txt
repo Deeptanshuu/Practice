@@ -1,0 +1,13 @@
+EXP_1 : 
+
+Aim Python program to understand
+	-Basic math operations 
+	-Variables
+	-If else ladder
+	-Functions
+	-Loops
+
+Algorithm-
+	-MDP add, subtract, multiply, divide
+		
+
